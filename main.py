@@ -7,7 +7,7 @@ from starlette.requests import Request
 app = FastAPI()
 
 # Mount static files for serving CSS, JS, images
-app.mount("/static", StaticFiles(directory="static"), name="static")
+app.mount("/assets", StaticFiles(directory="assets"), name="assets")
 
 # Set up Jinja2 template rendering
 templates = Jinja2Templates(directory=".")
